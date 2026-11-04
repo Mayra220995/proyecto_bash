@@ -1,0 +1,16 @@
+-----------------------------------
+REPORTE DE ESTADO DEL SERVIDOR
+---------------------------------------
+FECHA Y HORA:
+servidor: maquinaprueba
+
+-----USO DE DISCO (RAIZ) ------
+/dev/sda2       25623780 3523900  20772932  15% /
+
+ -------USO DE MEMORIA RAM---------
+               total        used        free      shared  buff/cache   available
+Mem:           1.6Gi       337Mi       1.0Gi       1.0Mi       408Mi       1.3Gi
+Swap:             0B          0B          0B
+
+ Estado: ANALISIS COMPLETADO EXITOSAMENTE
+----------------------------------------------
