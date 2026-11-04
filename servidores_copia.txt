@@ -1,0 +1,5 @@
+nodo_servidor1 45%
+nodo_servidor2 85%
+nodo_servidor3 60%
+nodo_servidor4 92%
+nodo_servidor5 75%

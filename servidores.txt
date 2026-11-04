@@ -1,0 +1,5 @@
+servidor1 45%
+servidor2 85%
+servidor3 60%
+servidor4 92%
+servidor5 75%

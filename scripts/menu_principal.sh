@@ -4,9 +4,9 @@
 
 while true; do
     clear
-    echo "--------------------------------------------"
+    echo "----------------------------------------------"
     echo "       SISTEMA DE ADMINISTRACION"
-    echo "---------------------------------------------"
+    echo "----------------------------------------------"
     echo "1) Ir al Gestor de Archivos"
     echo "2) Generar Analisis de Sistema"
     echo "3) Salir"
@@ -15,9 +15,11 @@ while true; do
     case $opcion in
         1)
             bash /home/mpenage/proyecto_bash/scripts/gestor.sh
+            read -p "Presione ENTER para regresar al menu..."
             ;;
         2)
             bash /home/mpenage/proyecto_bash/scripts/analisis.sh
+            read -p "Presione ENTER para regresar al menu..."
             ;;
         3)
             echo "Saliendo del sistema..."

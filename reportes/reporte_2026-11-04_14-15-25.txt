@@ -1,0 +1,29 @@
+--------------------------------------------------------
+ REPORTE DE SISTEMA
+ FECHA Y HORA: Wed Nov  4 02:15:25 PM -05 2026
+ Autora: Mayra Peña Garcia
+--------------------------------------------------------
+
+--- ESPACIO EN DISCO ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2        25G  3.0G   21G  13% /
+
+--- USO DE MEMORIA RAM ---
+               total        used        free      shared  buff/cache   available
+Mem:           1.6Gi       388Mi       695Mi       1.1Mi       715Mi       1.2Gi
+Swap:             0B          0B          0B
+
+--- PROCESOS ACTIVOS ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.9  25372 16508 ?        Ss   09:17   0:02 /usr/lib/systemd/systemd --switched-root --system --deserialize=55 splash noprompt noshell automatic-ubiquity crashkernel=2G-4G:320M,4G-32G:512M,32G-64G:1024M,64G-128G:2048M,128G-:4096M
+root           2  0.0  0.0      0     0 ?        S    09:17   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    09:17   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   09:17   0:00 [kworker/R-rcu_gp]
+root           5  0.0  0.0      0     0 ?        I<   09:17   0:00 [kworker/R-sync_wq]
+root           6  0.0  0.0      0     0 ?        I<   09:17   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           7  0.0  0.0      0     0 ?        I<   09:17   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   09:17   0:00 [kworker/R-netns]
+root          10  0.0  0.0      0     0 ?        I<   09:17   0:00 [kworker/0:0H-kblockd]
+
+Estado: ANALISIS COMPLETADO EXITOSAMENTE
+--------------------------------------------------------

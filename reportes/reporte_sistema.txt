@@ -1,0 +1,13 @@
+========================================================
+           REPORTE DE MONITOREO DEL SISTEMA
+========================================================
+Usuario actual : mpenage
+Fecha y hora   : Wed Nov  4 05:48:54 PM -05 2026
+--------------------------------------------------------
+Distribución Linux:
+PRETTY_NAME="Ubuntu 26.04 LTS"
+--------------------------------------------------------
+Espacio disponible en disco:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2        25G  3.0G   21G  13% /
+========================================================

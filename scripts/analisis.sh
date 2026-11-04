@@ -1,34 +1,40 @@
 #!/bin/bash
-# Script 3: Analisis del Sistema y Generacion de Reportes
-# Autora: Mayra Peña Garcia
+# Módulo 3: Análisis de Información
+# Autor:Mayra Alexandra Peña Garcia
 
-DIR_REPORTES="/home/mpenage/proyecto_bash/reportes"
-mkdir -p "$DIR_REPORTES"
-FECHA=$(date +"%Y-%m-%d_%H-%M-%S")
-ARCHIVO_REPORTE="$DIR_REPORTES/reporte_$FECHA.txt"
+DIR_PROYECTO="/home/mpenage/proyecto_bash"
+DATOS="$DIR_PROYECTO/servidores.txt"
+COPIA="$DIR_PROYECTO/servidores_copia.txt"
 
-echo "--------------------------------------------"
-echo "       ANALISIS Y ESTADO DEL SISTEMA"
-echo "---------------------------------------------"
-echo "Generando informe..."
+# 1. Crear archivo con datos ficticios de servidores
+cat << 'EOF' > "$DATOS"
+servidor1 45%
+servidor2 85%
+servidor3 60%
+servidor4 92%
+servidor5 75%
+EOF
 
-{
-    echo "-------------------------------------------"
-    echo " REPORTE DE SISTEMA - $FECHA"
-    echo " Autor: Mayra Peña Garcia"
-    echo "----------------------------------------------"
-    echo ""
-    echo "--- ESPACIO EN DISCO ---"
-    df -h /
-    echo ""
-    echo "--- USO DE MEMORIA RAM ---"
-    free -h
-    echo ""
-    echo "--- PROCESOS ACTIVOS ---"
-    ps aux | head -n 10
-} > "$ARCHIVO_REPORTE"
-
-echo "[OK] Reporte generado exitosamente en:"
-echo "$ARCHIVO_REPORTE"
+echo "------------------------------------------"
+echo "       ANALISIS DE DATOS - MODULO 3"
+echo "-------------------------------------------"
 echo ""
-read -p "Presiona ENTER para volver..."
+echo "--- DATOS ORIGINALES ---"
+cat "$DATOS"
+echo ""
+
+# 2. Uso de AWK: servidores 70%
+echo "--- ALERTA: Servidores con disco > 70% (usando awk) ---"
+awk '{
+    sub(/%/, "", $2); 
+    if ($2 > 70) print "ALERTA -> " $1 " tiene un uso del " $2 "%"
+}' "$DATOS"
+echo ""
+
+# 3. Uso de SED: para reemplazar palabras d euna copia
+echo "--- CREANDO COPIA Y REEMPLAZANDO TEXTO (usando sed) ---"
+cp "$DATOS" "$COPIA"
+sed -i 's/servidor/nodo_servidor/g' "$COPIA"
+
+echo "Copia modificada guardada en: $COPIA"
+cat "$COPIA"
